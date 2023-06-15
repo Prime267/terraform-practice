@@ -7,6 +7,7 @@ resource "aws_s3_bucket" "tf-state-storage" {
       prevent_destroy = true
     }
 }
+
 # create a dynamodb table for locking the state file
 resource "aws_dynamodb_table" "dynamodb-terraform-state-lock" {
   name = "terraform-state-lock-for-prectice"
