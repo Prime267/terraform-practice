@@ -1,0 +1,10 @@
+terraform {
+  backend "s3" {
+    encrypt=true
+    bucket = "tf-state-storage-for-prectice-t02"
+    dynamodb_table = "terraform-state-lock-for-prectice-t02"
+    key    = "terraform-t02.tfstate"
+    region = "us-east-2"
+    
+  }
+}
